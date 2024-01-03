@@ -8,8 +8,11 @@ git clone https://github.com/bbachi/python-flask-restapi.git
 
 // change directory
 cd python-flask-restapi// build the image
+
 docker build -t flask-restapi .// list the image
+
 docker images
+
 
 Run the container
 // run the container
