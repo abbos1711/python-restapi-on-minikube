@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: pythonapi
+spec:
+  containers:
+#    - image: docker.io/10449/flask-restapi
+    - image: 10449/flask-restapi  # docker image-name
+      name: pythonapi  
+      imagePullPolicy: Always
+      resources: {}
+      ports:
+        - containerPort: 5000
+#kubectl create -f pod.yml

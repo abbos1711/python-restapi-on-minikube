@@ -1,0 +1,31 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  labels:
+    app: pythonapi
+  name: pythonapi
+spec:
+  replicas: 5
+  selector:
+    matchLabels:
+      app: pythonapi
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        app: pythonapi
+    spec:
+      containers:
+#      - image: docker.io/bbachin1/flask-restapi
+      - image: 10449/flask-restapi
+        name: pythonapi
+        imagePullPolicy: Always
+        resources: {}
+        ports:
+          - containerPort: 5000
+status: {}
+
+# #kubectl create -f deployment.yml
+
